@@ -1,0 +1,2 @@
+# Sublime JSON Updater
+The default JSON syntax highlighting is very barebones, with no highlighting differences between levels or even between keys/values. This script updates the theme with the included style update.
