@@ -1,0 +1,26 @@
+[alias]
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	undo = reset --soft HEAD~
+	branches = branch -a
+	ir = "!sh -c \"git rebase -i HEAD~$1\" -"
+	po = remote prune origin
+	# View all alias'
+	la = "! git config --get-regexp ^alias. | cut -d. -f2-"
+	ciw = "!sh -c \"git commit -m '[web] - '$1\" -"
+	pn = "!sh -c 'git pull  && npm install'"
+
+	# https://github.com/grantwinney/git-alias-template/
+	co = checkout
+	cob = checkout -b
+	ci = commit -m
+	cin = commit --amend --no-edit
+	st = status
+	br = branch
+	df = diff
+	re = checkout .
+	pop = stash pop
+	
+	hist = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate --date=short
+
+	 # similar to hist but includes a list of files changed in commit
+  	histf = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate --numstat
